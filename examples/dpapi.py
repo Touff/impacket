@@ -219,7 +219,7 @@ class DPAPI:
                     from getpass import getpass
                     password = getpass("Password:")
                 else:
-                    password = options.password
+                    password = self.options.password
                 key1, key2, key3 = self.deriveKeysFromUser(self.options.sid, password)
 
                 # if mkf['flags'] & 4 ? SHA1 : MD4
